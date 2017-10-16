@@ -13,6 +13,8 @@
 		3A9B42281F8F76A700E2A51F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A9B42271F8F76A700E2A51F /* Assets.xcassets */; };
 		3A9B422B1F8F76A700E2A51F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A9B42291F8F76A700E2A51F /* LaunchScreen.storyboard */; };
 		3A9B422E1F8F76A700E2A51F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9B422D1F8F76A700E2A51F /* main.m */; };
+		3AD538001F94D9A7001AFA86 /* YXStackViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD537FC1F94D9A6001AFA86 /* YXStackViewItem.m */; };
+		3AD538011F94D9A7001AFA86 /* YXStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD537FF1F94D9A7001AFA86 /* YXStackView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		3A9B422A1F8F76A700E2A51F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A9B422C1F8F76A700E2A51F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A9B422D1F8F76A700E2A51F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3AD537FC1F94D9A6001AFA86 /* YXStackViewItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXStackViewItem.m; sourceTree = "<group>"; };
+		3AD537FD1F94D9A6001AFA86 /* YXStackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXStackView.h; sourceTree = "<group>"; };
+		3AD537FE1F94D9A7001AFA86 /* YXStackViewItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXStackViewItem.h; sourceTree = "<group>"; };
+		3AD537FF1F94D9A7001AFA86 /* YXStackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXStackView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		3A9B421D1F8F76A700E2A51F /* YXStackViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3A9B42371F8F7C3B00E2A51F /* YXStackView */,
 				3A9B421E1F8F76A700E2A51F /* AppDelegate.h */,
 				3A9B421F1F8F76A700E2A51F /* AppDelegate.m */,
 				3A9B42211F8F76A700E2A51F /* ViewController.h */,
@@ -69,6 +76,17 @@
 				3A9B422D1F8F76A700E2A51F /* main.m */,
 			);
 			path = YXStackViewDemo;
+			sourceTree = "<group>";
+		};
+		3A9B42371F8F7C3B00E2A51F /* YXStackView */ = {
+			isa = PBXGroup;
+			children = (
+				3AD537FD1F94D9A6001AFA86 /* YXStackView.h */,
+				3AD537FF1F94D9A7001AFA86 /* YXStackView.m */,
+				3AD537FE1F94D9A7001AFA86 /* YXStackViewItem.h */,
+				3AD537FC1F94D9A6001AFA86 /* YXStackViewItem.m */,
+			);
+			path = YXStackView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +163,8 @@
 				3A9B42231F8F76A700E2A51F /* ViewController.m in Sources */,
 				3A9B422E1F8F76A700E2A51F /* main.m in Sources */,
 				3A9B42201F8F76A700E2A51F /* AppDelegate.m in Sources */,
+				3AD538011F94D9A7001AFA86 /* YXStackView.m in Sources */,
+				3AD538001F94D9A7001AFA86 /* YXStackViewItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
