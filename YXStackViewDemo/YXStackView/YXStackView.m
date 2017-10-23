@@ -55,26 +55,29 @@
 {
     [super layoutSubviews];
     
-    CGFloat totalSpace = 0.0;
-    NSInteger flexibleSpaceCount = 0;
-    for (YXStackViewItem *item in _items) {
+    __block CGFloat totalSpace = 0.0;
+    __block NSInteger flexibleSpaceCount = 0;
+    __block NSInteger spaceCount = 0;
+    [_items enumerateObjectsUsingBlock:^(YXStackViewItem * _Nonnull item, NSUInteger idx, BOOL * _Nonnull stop) {
         if (item.style == YXStackViewItemStyleCustom) {
             if (!item.customView) {
-                continue;
+                return;
             }
             if (self.axis == YXStackViewAxisHorizontal) {
                 totalSpace += item.customView.bounds.size.width;
             } else {
                 totalSpace += item.customView.bounds.size.height;
             }
+            if (_items.lastObject != item) {
+                YXStackViewItem *nextItem = _items[idx + 1];
+                if (nextItem.style == YXStackViewItemStyleCustom && nextItem.customView) {
+                    spaceCount++;
+                }
+            }
         } else {
             flexibleSpaceCount++;
         }
-    }
-    NSInteger spaceCount = _items.count - flexibleSpaceCount * 2 - 1;
-    if (spaceCount < 0) {
-        spaceCount = 0;
-    }
+    }];
     totalSpace += spaceCount * self.spacing;
     CGFloat flexibleSpacing = 0.0;
     if (self.axis == YXStackViewAxisHorizontal) {
