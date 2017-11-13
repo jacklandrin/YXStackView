@@ -19,19 +19,20 @@
     [super viewDidLoad];
     YXStackView *toolbar = [[YXStackView alloc] initWithFrame:CGRectMake(0, 200, self.view.frame.size.width, 40)];
     toolbar.spacing = 10.0;
+    toolbar.isAutoFitEdge = YES;
 //    toolbar.axis = YXStackViewAxisVertical;
 //    toolbar.reverse = YES;
     
     [self.view addSubview:toolbar];
     
-    UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
     view1.backgroundColor = [UIColor redColor];
     
     YXStackViewItem *item1 = [[YXStackViewItem alloc] init];
     item1.style = YXStackViewItemStyleCustom;
     item1.customView = view1;
     
-    UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 250, 30)];
     view2.backgroundColor = [UIColor blueColor];
     
     YXStackViewItem *item2 = [[YXStackViewItem alloc] init];
@@ -43,11 +44,11 @@
     space.style = YXStackViewItemStyleFlexibleSpace;
     
     
-    UIView *view3 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+    UIView *view3 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
     view3.backgroundColor = [UIColor purpleColor];
     
     YXStackViewItem *item3 = [[YXStackViewItem alloc] init];
-    item3.style = YXStackViewItemStyleFlexibleItem;
+    item3.style = YXStackViewItemStyleCustom;
     item3.customView = view3;
     
     UIView *view4 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
@@ -57,7 +58,8 @@
     item4.style = YXStackViewItemStyleCustom;
     item4.customView = view4;
     
-    [toolbar setItems:@[item1,item3,item2,space]];
+    toolbar.columnSpacing = 10;
+    [toolbar setItems:@[item1,item3,item2]];
     
 }
 

@@ -17,6 +17,7 @@ typedef enum {
 @interface YXStackViewItem : NSObject
 
 @property (nonatomic, strong) UIView *customView;
+@property (nonatomic, assign) NSUInteger index;
 @property (nonatomic, assign) YXStackViewItemStyle style;
 
 @end
