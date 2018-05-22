@@ -143,7 +143,6 @@
                 originRect.origin.x = itemX;
             }
             customView.frame = originRect;
-//            [self addSubview:customView];
         }];
         if (self.axis == YXStackViewAxisHorizontal) {
             currentY += (matrixcColumn.itemMaxLength + self.columnSpacing);
