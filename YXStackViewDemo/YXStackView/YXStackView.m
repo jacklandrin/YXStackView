@@ -97,11 +97,11 @@
                 matrixColumn = [[YXStackViewMatrixColumn alloc] init];
                 matrixColumn.columnNum = currentColumn;
                 [columnArray addObject:matrixColumn];
-                currentX += (originRect.size.width + self.spacing);
             } else {
                 matrixColumn = [columnArray objectAtIndex:currentColumn];
                 originRect.origin.x = currentX;
             }
+            currentX += (originRect.size.width + self.spacing);
             [matrixColumn.itemArray addObject:item];
             matrixColumn.itemMaxLength = MAX(matrixColumn.itemMaxLength, originRect.size.height);
             
@@ -118,11 +118,11 @@
                 matrixColumn = [[YXStackViewMatrixColumn alloc] init];
                 matrixColumn.columnNum = currentColumn;
                 [columnArray addObject:matrixColumn];
-                currentY += (originRect.size.height + self.spacing);
             } else {
                 matrixColumn = [columnArray objectAtIndex:currentColumn];
                 originRect.origin.y = currentY;
             }
+            currentY += (originRect.size.height + self.spacing);
             [matrixColumn.itemArray addObject:item];
             matrixColumn.itemMaxLength = MAX(matrixColumn.itemMaxLength, originRect.size.width);
         }

@@ -58,8 +58,15 @@
     item4.style = YXStackViewItemStyleCustom;
     item4.customView = view4;
     
+    UIView *view5 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 30)];
+    view5.backgroundColor = [UIColor brownColor];
+    
+    YXStackViewItem *item5 = [[YXStackViewItem alloc] init];
+    item5.style = YXStackViewItemStyleCustom;
+    item5.customView = view5;
+    
     toolbar.columnSpacing = 10;
-    [toolbar setItems:@[item1,item3,item2]];
+    [toolbar setItems:@[item1, item2, item3, item4, item5]];
     
 }
 
